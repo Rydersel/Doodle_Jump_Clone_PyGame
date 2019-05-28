@@ -1,3 +1,4 @@
+import pygame as pg
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
@@ -10,7 +11,15 @@ SCREEN_HEIGHT = 600
 PLAYER_GRAV = 0.8
 PLAYER_ACC = 0.5
 PLAYER_FRICTION = -0.12
-Switch = False
+Switch = 0
+PLAYER_JUMP = 20
+FONT_NAME = 'Times New Roman'
+lava_x = 0
+lava_y = 0
+def changespeed(self, x, y):
+    """ Change the speed of the player. """
+    self.change_x += x
+    self.change_y += y
 
 PLATFORM_LIST = [(0, SCREEN_HEIGHT - 40, SCREEN_WIDTH, 40),
                  (SCREEN_WIDTH / 2 - 50, SCREEN_HEIGHT * 3 / 4, 100, 20),
